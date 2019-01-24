@@ -1,0 +1,16 @@
+{
+  "name": "@rpi-gpio-emulator/server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_DEBUG=gallus:* node -r esm ./lib/index.js",
+    "start:production": "yarn start"
+  },
+  "dependencies": {
+    "@rpi-gpio-emulator/gpio": "0.0.0",
+    "@rpi-gpio-emulator/graphql-schema": "0.0.0",
+    "apollo-server": "^2.0.0-rc.8",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {}
+}

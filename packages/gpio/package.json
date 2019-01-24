@@ -1,0 +1,14 @@
+{
+  "name": "@rpi-gpio-emulator/gpio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {},
+  "main": "./lib/index.js",
+  "dependencies": {
+    "delay": "^3.0.0",
+    "fs-extra": "^7.0.0",
+    "p-event": "^2.2.0",
+    "rpi-gpio": "^1.0.0"
+  },
+  "devDependencies": {}
+}

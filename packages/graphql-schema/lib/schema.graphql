@@ -1,0 +1,15 @@
+type Query {
+  gpio: GPIO!
+}
+
+type Mutation {
+  gpioWrite(channel: Int!, value: Int!): Int!
+}
+
+type Subscription {
+  gpioChange(channel: Int!): Int!
+}
+
+type GPIO {
+  read(channel: Int!): Int!
+}
