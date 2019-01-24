@@ -2,10 +2,13 @@
   "name": "@rpi-gpio-emulator/frontend",
   "version": "0.0.0",
   "private": true,
+  "main": "dist/index.html",
+  "files": ["dist"],
   "scripts": {
     "start": "webpack-dev-server --mode development --host 0.0.0.0 --port 8081",
     "start:production": "serve -l 8081 ./dist",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "prepare": "yarn build"
   },
   "dependencies": {
     "@material-ui/core": "^1.4.0",

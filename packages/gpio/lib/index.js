@@ -1,1 +1,1 @@
-export * from './GPIO'
+module.exports = require('./GPIO')

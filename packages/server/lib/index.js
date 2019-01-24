@@ -1,17 +1,31 @@
-import { ApolloServer } from 'apollo-server'
-import get from 'lodash/get'
-import { schema } from '@rpi-gpio-emulator/graphql-schema'
+import { ApolloServer } from 'apollo-server-express'
+import { createSchema } from '@rpi-gpio-emulator/graphql-schema'
+import { dirname } from 'path'
 
-const server = new ApolloServer({
-  schema,
-  subscriptions: {},
-  formatError: error => {
-    console.error(error)
-    console.error(get(error, 'originalError.stack', '[no stack]'))
-    return error
+export const createServer = async (
+  gpio,
+  { port, frontendStaticPath } = {
+    port: 4000
   }
-})
+) => {
+  const express = require('express')
+  const server = new ApolloServer({ schema: createSchema(gpio) })
 
-server.listen({ port: 4000 }, () =>
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
-)
+  const app = express()
+  server.applyMiddleware({ app })
+
+  if (frontendStaticPath !== false) {
+    app.use(
+      express.static(
+        frontendStaticPath ||
+          dirname(require.resolve('@rpi-gpio-emulator/frontend'))
+      )
+    )
+  }
+
+  app.listen({ port }, () =>
+    console.log(
+      `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`
+    )
+  )
+}

@@ -2,15 +2,20 @@
   "name": "@rpi-gpio-emulator/server",
   "version": "0.0.0",
   "private": true,
+  "main": "./lib/index.js",
+  "files": ["lib", "bin"],
+  "bin": {
+    "rpi-gpio": "./bin/rpi-gpio.js"
+  },
   "scripts": {
-    "start": "NODE_DEBUG=gallus:* node -r esm ./lib/index.js",
+    "start": "NODE_DEBUG=gallus:* ./bin/rpi-gpio.js --no-serve-static",
     "start:production": "yarn start"
   },
   "dependencies": {
+    "@rpi-gpio-emulator/frontend": "0.0.0",
     "@rpi-gpio-emulator/gpio": "0.0.0",
     "@rpi-gpio-emulator/graphql-schema": "0.0.0",
-    "apollo-server": "^2.0.0-rc.8",
-    "lodash": "^4.17.10"
+    "apollo-server-express": "^2.3.1"
   },
   "devDependencies": {}
 }

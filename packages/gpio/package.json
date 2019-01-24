@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {},
   "main": "./lib/index.js",
+  "files": ["lib"],
   "dependencies": {
     "delay": "^3.0.0",
     "fs-extra": "^7.0.0",
