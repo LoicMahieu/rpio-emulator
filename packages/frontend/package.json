@@ -8,10 +8,13 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --host 0.0.0.0 --port 8081",
     "start:production": "serve -l 8081 ./dist",
-    "build": "webpack --mode production",
+    "build": "rm -rf dist && webpack --mode production",
     "prepare": "yarn build"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "@material-ui/core": "^3.9.0",
     "@material-ui/icons": "^3.0.2",
     "apollo-cache-inmemory": "^1.4.2",
@@ -20,23 +23,18 @@
     "apollo-link-http": "^1.5.9",
     "apollo-link-ws": "^1.0.12",
     "apollo-utilities": "^1.1.2",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-graphql-tag": "^1.6.0",
+    "css-loader": "^2.1.0",
     "date-fns": "^1.30.1",
     "formik": "^1.4.2",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
+    "html-webpack-plugin": "^3.2.0",
     "lodash": "^4.17.11",
     "react": "^16.7.0",
     "react-apollo": "^2.4.0",
-    "react-dom": "^16.7.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "babel-plugin-graphql-tag": "^1.6.0",
-    "css-loader": "^2.1.0",
-    "html-webpack-plugin": "^3.2.0",
+    "react-dom": "^16.7.0",
     "serve": "^10.1.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.0",
@@ -46,5 +44,8 @@
   "browserslist": [
     "last 1 version"
   ],
-  "gitHead": "3d8127eec6ae80ae5ab12a132ee14e2e3085f54c"
+  "gitHead": "3d8127eec6ae80ae5ab12a132ee14e2e3085f54c",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
