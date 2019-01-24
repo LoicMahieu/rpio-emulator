@@ -1,12 +1,13 @@
 {
   "name": "@rpi-gpio-emulator/graphql-schema",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {},
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "graphql": "^14.1.1",
     "graphql-tools": "^4.0.4"
-  },
-  "devDependencies": {}
+  }
 }

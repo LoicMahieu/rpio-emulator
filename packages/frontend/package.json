@@ -1,8 +1,10 @@
 {
   "name": "@rpi-gpio-emulator/frontend",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/index.html",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "webpack-dev-server --mode development --host 0.0.0.0 --port 8081",
     "start:production": "serve -l 8081 ./dist",

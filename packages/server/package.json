@@ -1,6 +1,6 @@
 {
   "name": "@rpi-gpio-emulator/server",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./lib/index.js",
   "files": [
     "lib",
@@ -14,11 +14,10 @@
     "start:production": "yarn start"
   },
   "dependencies": {
-    "@rpi-gpio-emulator/frontend": "0.0.0",
-    "@rpi-gpio-emulator/gpio": "0.0.0",
-    "@rpi-gpio-emulator/graphql-schema": "0.0.0",
+    "@rpi-gpio-emulator/frontend": "^0.0.1",
+    "@rpi-gpio-emulator/gpio": "^0.0.1",
+    "@rpi-gpio-emulator/graphql-schema": "^0.0.1",
     "apollo-server-express": "^2.3.1",
     "esm": "^3.1.1"
-  },
-  "devDependencies": {}
+  }
 }
