@@ -20,6 +20,5 @@
     "apollo-server-express": "^2.3.1",
     "esm": "^3.1.1",
     "express": "^4.16.4"
-  },
-  "gitHead": "3d8127eec6ae80ae5ab12a132ee14e2e3085f54c"
+  }
 }
