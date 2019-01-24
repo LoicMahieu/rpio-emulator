@@ -11,24 +11,24 @@
     "start:production": "lerna run --stream --no-sort start:production"
   },
   "dependencies": {
-    "esm": "^3.0.71",
+    "esm": "^3.1.1",
     "hard-rejection": "^1.0.0",
     "prettier": "^1.16.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
+    "babel-eslint": "^10.0.1",
     "babel-preset-env": "^1.7.0",
-    "eslint": "4",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-config-standard-react": "^6.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "lerna": "^2.11.0"
+    "eslint": "5",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
+    "lerna": "^3.10.7"
   },
   "workspaces": [
     "packages/*"

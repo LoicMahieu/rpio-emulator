@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "main": "./lib/index.js",
-  "files": ["lib", "bin"],
+  "files": [
+    "lib",
+    "bin"
+  ],
   "bin": {
     "rpi-gpio": "./bin/rpi-gpio.js"
   },
@@ -15,7 +18,8 @@
     "@rpi-gpio-emulator/frontend": "0.0.0",
     "@rpi-gpio-emulator/gpio": "0.0.0",
     "@rpi-gpio-emulator/graphql-schema": "0.0.0",
-    "apollo-server-express": "^2.3.1"
+    "apollo-server-express": "^2.3.1",
+    "esm": "^3.1.1"
   },
   "devDependencies": {}
 }
