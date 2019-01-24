@@ -1,7 +1,6 @@
 {
   "name": "@rpi-gpio-emulator/frontend",
   "version": "0.0.0",
-  "private": true,
   "main": "dist/index.html",
   "files": ["dist"],
   "scripts": {

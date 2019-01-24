@@ -1,7 +1,6 @@
 {
   "name": "@rpi-gpio-emulator/server",
   "version": "0.0.0",
-  "private": true,
   "main": "./lib/index.js",
   "files": [
     "lib",
