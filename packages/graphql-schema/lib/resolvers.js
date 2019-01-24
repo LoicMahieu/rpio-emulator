@@ -13,14 +13,14 @@ export const createResolvers = gpio => {
       }
     },
     GPIO: {
-      read (gpio, { channel }) {
-        return gpio.read(channel)
+      read (obj, { channel }) {
+        return gpio.promise.read(channel)
       }
     },
     Mutation: {
-      async gpioWrite (gpio, { channel, value }) {
-        await gpio.write(channel, value)
-        return gpio.read(channel)
+      async gpioWrite (obj, { channel, value }) {
+        await gpio.promise.write(channel, value)
+        return gpio.promise.read(channel)
       }
     },
     Subscription: {
